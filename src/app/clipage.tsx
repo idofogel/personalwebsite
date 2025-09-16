@@ -19,6 +19,9 @@ export default function Clipage() {
   const movingfade = useRef<HTMLDivElement | null>(null);
   const splash = useRef<HTMLDivElement | null>(null);
   useEffect(()=>{
+    if(/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
+      setShowHam(false);
+    }
     if(headline.current !== null)
       setActive(false);
     if(movingfade.current !== null)
@@ -30,6 +33,9 @@ export default function Clipage() {
     
   },[]);
   const chooseModule = (index: number) => {
+    if(/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){
+      setShowHam(false);
+    }
     setModule(headlineslist[index]);
     if(splash.current){
       splash.current.style.display = "none";

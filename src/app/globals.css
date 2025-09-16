@@ -153,6 +153,7 @@ body {
     position: absolute;
     right: 28px;
     z-index: 4;
+    background-color:#23607e;
   }
   .header .sub-header {
     margin-left: 30px;
